@@ -1,0 +1,400 @@
+/* Anthony Krivonos 2015 LostCause Stylesheet */
+body
+{
+      overflow-x: hidden;
+}
+
+body.index
+{
+      background: url("images/indexbg.jpg");
+      background-repeat: no-repeat;
+}
+
+@font-face
+{
+    font-family: titleFont;
+    src: url(fonts/titlefont.ttf);
+}
+
+@font-face
+{
+    font-family: subFont;
+    src: url(fonts/subfont.ttf);
+}
+
+@font-face
+{
+    font-family: miniFont;
+    src: url(fonts/minifont.otf);
+}
+
+.indexbg
+{
+      z-index:-1;
+      min-height: 100%;
+      min-width: 1424px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+}
+
+.loginpopup, .helppopup, .donatepopup
+{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: default;
+      user-select: none;
+      background-color:white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -300px;
+}
+
+.donatepopup
+{
+      width: 600px;
+      height: 550px;
+      margin-top: -275px;
+      margin-left: -300px;
+}
+
+.helppopup
+{
+      width: 600px;
+      height: 500px;
+      margin-top: -250px;
+      margin-left: -300px;
+}
+
+.loginpopup > p, .helppopup > p, .donatepopup > p, .offline > p, .online > p
+{
+      font-family: titleFont;
+      text-align:center;
+      font-size: 99pt;
+      margin-top:30px;
+      margin-bottom: 10px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.loginpopup > span, .helppopup > span, .donatepopup > span
+{
+      position: absolute;
+      font-family: titleFont;
+      font-size: 20pt;
+      margin-top:-175px;
+      margin-left: 24px;
+      opacity: .4;
+}
+
+.loginpopup > form > .uname, .loginpopup > form > .pword, .donatepopup > form > .pword
+{
+      width:180px;
+      height:50px;
+      font-size: 34pt;
+      font-family: subfont;
+      text-align: center;
+      border: solid 1px black;
+      border-radius: 5px;
+      padding-top:8px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.loginpopup > form > .uname
+{
+      margin-right: 10px;
+      margin-left: 100px;
+}
+
+.loginpopup > form > .pword
+{
+      margin-left: 10px;
+      margin-right: 100px;
+}
+
+.loginpopup > form > .submit, .loginpopup > .reg
+{
+      display: inline;
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: black;
+      color: white;
+      border:none;
+      font-family: minifont;
+      font-size: 20pt;
+      margin-top: 20px;
+}
+
+.loginpopup > .reg
+{
+      margin-top: 0px;
+      background-color: #454545;
+}
+
+.playoffline, .gamehelp, .donate, .info
+{
+      position: fixed;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: default;
+      user-select: none;
+      max-width: 200px;
+      min-width: 100px;
+}
+
+.playoffline
+{
+      top: 0;
+      left: 0;
+      width:14%;
+}
+
+.gamehelp
+{
+      top: 0;
+      right: 0;
+      width:14%;
+}
+
+.donate
+{
+      bottom: 0;
+      left: 0;
+      width:14%;
+}
+
+.gofundme
+{
+      position: inherit;
+      margin-left: 20px;
+      margin-top: -10px;
+}
+
+.info
+{
+      bottom: 0;
+      right: 0;
+      width:14%;
+}
+
+.pwordhelp
+{
+      font-family: miniFont;
+      position: absolute;
+      z-index: 2;
+      font-size: 13pt;
+      width: 10px;
+      margin-left: 500px;
+      margin-top: -118px;
+}
+
+.offline
+{
+      font-family:titleFont;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: -20px;
+      margin-left: 2px;
+      width: 200px;
+      height: 43px;
+      text-align: center;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.offline > p
+{
+      font-size: 30pt;
+}
+
+.charselect
+{
+      font-family:subFont;
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: 5px;
+      margin-left: 2px;
+      width: 320px;
+      height: 43px;
+      text-align: center;
+      cursor: default;
+}
+
+.charselect > div
+{
+      padding-top: 9px;
+}
+
+.charselect > div + div
+{
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      width: 114px;
+      height: 19px;
+      margin-top: -5px;
+      margin-left: 103px;
+      text-align: center;
+}
+
+.charselect > div > img
+{
+      width: 30px;
+      margin-top:-25px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.chardown
+{
+      font-family:subFont;
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: 5px;
+      margin-left: 2px;
+      width: 320px;
+      height: 700px;
+      text-align: center;
+      cursor: default;
+}
+
+.charform > input[type='text']
+{
+      font-family:minifont;
+      width:250px;
+      height: 20pt;
+      font-size: 20pt;
+      text-align: center;
+      margin-top: 15px;
+}
+
+.L
+{
+      width: 40px;
+      position: absolute;
+      margin-top: 27px;
+      margin-left: -45px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.R
+{
+      width: 40px;
+      position: absolute;
+      margin-top: 27px;
+      margin-left: 234px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.line
+{
+      height: 10px;
+      width: 230px;
+}
+
+.slider
+{
+      display: inline;
+      display: block;
+      margin-top:50px;
+}
+
+.nav
+{
+      position: absolute;
+      display: block;
+      width:20px;
+      left: 55px;
+      margin-top:-33px;
+}
+
+.chooseclass
+{
+      position: absolute;
+      margin-top:250px;
+      margin-left: 22px;
+}
+
+.chooseclass > input
+{
+      display: inline;
+}
+
+.vlinel
+{
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      margin-top: 39px;
+}
+
+.vliner
+{
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      margin-top: 39px;
+      margin-left: -233px;
+}
+
+input + img
+{
+      width:35px;
+}
+
+.counttag, .countid
+{
+      font-size:16pt;
+      font-family: miniFont;
+}
+
+.counttag
+{
+      display:inline;
+}
+
+.countid
+{
+      display:inline;
+}
+
+.cl
+{
+      display: none;
+}
+
+div > label
+{
+      cursor: hand;
+      cursor: pointer;
+}
+
+.updatebutton
+{
+      display: block;
+      margin:auto;
+      width: 110px;
+}

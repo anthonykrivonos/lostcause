@@ -1,0 +1,915 @@
+/* Anthony Krivonos 2015 LostCause Stylesheet */
+body
+{
+      overflow-x: hidden;
+}
+
+body.index
+{
+      background: url("images/indexbg.jpg");
+      background-repeat: no-repeat;
+}
+
+@font-face
+{
+    font-family: titleFont;
+    src: url(fonts/titlefont.ttf);
+}
+
+@font-face
+{
+    font-family: subFont;
+    src: url(fonts/subfont.ttf);
+}
+
+@font-face
+{
+    font-family: miniFont;
+    src: url(fonts/minifont.otf);
+}
+
+@font-face
+{
+    font-family: clockFont;
+    src: url(fonts/clockfont.otf);
+}
+
+.indexbg
+{
+      z-index:-1;
+      min-height: 100%;
+      min-width: 1424px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+}
+
+.loginpopup, .helppopup, .donatepopup
+{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: default;
+      user-select: none;
+      background-color:white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -300px;
+}
+
+.donatepopup
+{
+      width: 600px;
+      height: 550px;
+      margin-top: -275px;
+      margin-left: -300px;
+}
+
+.helppopup
+{
+      width: 600px;
+      height: 500px;
+      margin-top: -250px;
+      margin-left: -300px;
+}
+
+.loginpopup > p, .helppopup > p, .donatepopup > p, .offline > p, .online > p
+{
+      font-family: titleFont;
+      text-align:center;
+      font-size: 99pt;
+      margin-top:30px;
+      margin-bottom: 10px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.loginpopup > span, .helppopup > span, .donatepopup > span
+{
+      position: absolute;
+      font-family: titleFont;
+      font-size: 20pt;
+      margin-top:-175px;
+      margin-left: 24px;
+      opacity: .4;
+}
+
+.loginpopup > form > .uname, .loginpopup > form > .pword, .donatepopup > form > .pword
+{
+      width:180px;
+      height:50px;
+      font-size: 34pt;
+      font-family: subfont;
+      text-align: center;
+      border: solid 1px black;
+      border-radius: 5px;
+      padding-top:8px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.loginpopup > form > .uname
+{
+      margin-right: 10px;
+      margin-left: 100px;
+}
+
+.loginpopup > form > .pword
+{
+      margin-left: 10px;
+      margin-right: 100px;
+}
+
+.loginpopup > form > .submit, .loginpopup > .reg
+{
+      display: inline;
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: black;
+      color: white;
+      border:none;
+      font-family: minifont;
+      font-size: 20pt;
+      margin-top: 20px;
+}
+
+.loginpopup > .reg
+{
+      margin-top: 0px;
+      background-color: #454545;
+}
+
+.playoffline, .gamehelp, .donate, .info
+{
+      position: fixed;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: default;
+      user-select: none;
+      max-width: 200px;
+      min-width: 100px;
+}
+
+.playoffline
+{
+      top: 0;
+      left: 0;
+      width:14%;
+}
+
+.gamehelp
+{
+      top: 0;
+      right: 0;
+      width:14%;
+}
+
+.donate
+{
+      bottom: 0;
+      left: 0;
+      width:14%;
+}
+
+.gofundme
+{
+      position: inherit;
+      margin-left: 20px;
+      margin-top: -10px;
+}
+
+.info
+{
+      bottom: 0;
+      right: 0;
+      width:14%;
+}
+
+.pwordhelp
+{
+      font-family: miniFont;
+      position: absolute;
+      z-index: 2;
+      font-size: 13pt;
+      width: 10px;
+      margin-left: 500px;
+      margin-top: -118px;
+}
+
+.offline
+{
+      font-family:titleFont;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: -20px;
+      margin-left: 2px;
+      width: 200px;
+      height: 43px;
+      text-align: center;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.offline > p
+{
+      font-size: 30pt;
+}
+
+.charselect
+{
+      font-family:subFont;
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: 5px;
+      margin-left: 2px;
+      width: 320px;
+      height: 43px;
+      text-align: center;
+      cursor: default;
+}
+
+.charselect > div
+{
+      padding-top: 9px;
+}
+
+.charselect > div + div
+{
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      width: 114px;
+      height: 19px;
+      margin-top: -5px;
+      margin-left: 103px;
+      text-align: center;
+}
+
+.charselect > div > img
+{
+      width: 30px;
+      margin-top:-25px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.chardown
+{
+      font-family:subFont;
+      font-size: 20pt;
+      background: white;
+      border-radius: 15px;
+      margin: 20px;
+      margin-top: -34px;
+      margin-left: 2px;
+      width: 320px;
+      height: 728px;
+      text-align: center;
+      cursor: default;
+      display: none;
+      z-index:-1;
+      margin-bottom: 30px;
+}
+
+.charform > input[type='text']
+{
+      font-family:minifont;
+      width:250px;
+      height: 20pt;
+      font-size: 20pt;
+      text-align: center;
+      margin-top: 15px;
+}
+
+.L
+{
+      width: 40px;
+      position: absolute;
+      margin-top: 27px;
+      margin-left: -45px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.R
+{
+      width: 40px;
+      position: absolute;
+      margin-top: 27px;
+      margin-left: 234px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.line
+{
+      height: 10px;
+      width: 230px;
+}
+
+.slider
+{
+      display: inline;
+      display: block;
+      margin-top:50px;
+}
+
+.nav
+{
+      position: absolute;
+      display: block;
+      width:20px;
+      margin-top:-33px;
+}
+
+.left
+{
+      position: absolute;
+      left: 162px;
+}
+
+.chooseclass
+{
+      position: absolute;
+      margin-top:250px;
+      margin-left: 22px;
+}
+
+.chooseclass > input
+{
+      display: inline;
+}
+
+.vlinel
+{
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      margin-top: 39px;
+}
+
+.vliner
+{
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      margin-top: 39px;
+      margin-left: -233px;
+}
+
+input + img
+{
+      width:35px;
+}
+
+.counttag, .countid
+{
+      font-size:16pt;
+      font-family: miniFont;
+}
+
+.counttag
+{
+      display:inline;
+}
+
+.countid
+{
+      display:inline;
+}
+
+.cl
+{
+      display: none;
+}
+
+div > label
+{
+      cursor: hand;
+      cursor: pointer;
+}
+
+.updatebutton
+{
+      display: block;
+      margin:auto;
+      width: 100%;
+      height: 35px;
+      margin-top: 15px;
+      border:none;
+      color:white;
+      background: black;
+      font-size: 18pt;
+      font-family: miniFont;
+      border-radius: 0px 0px 15px 15px ;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.topchardownbg
+{
+      position:absolute;
+      width: 320px;
+      height: 20px;
+      background:white;
+      margin-top: -4px;
+      z-index:-1;
+}
+
+.charlist
+{
+      position: absolute;
+      background: white;
+      left: 350px;
+      right: 10px;
+      border-radius: 15px;
+      margin-top: -7px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      min-width: 580px;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom:20px;
+}
+
+.addsub
+{
+      font-family: miniFont;
+      font-size: 10pt;
+      text-align: left;
+      margin-top: -20px;
+      background: white;
+      border-radius: 15px;
+      width: 250px;
+      height: 40px;
+      padding-top: 8px;
+      color: gray;
+      border-color: gray;
+      margin-bottom: -30px;
+}
+
+.addsub > #levelselector
+{
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      text-align:center;
+      position:absolute;
+      border: solid 1px black;
+      background-color: white;
+      font-family:miniFont;
+      font-size:10pt;
+      border-radius: 0px;
+      height:16px;
+      margin-top:-1px;
+      margin-left:8px;
+}
+
+.playgame
+{
+      font-family: miniFont;
+      font-size: 10pt;
+      text-align: left;
+      margin-top: -20px;
+      background: white;
+      border-radius: 15px;
+      width: 89px;
+      height: 20px;
+      padding-top: 8px;
+      color: gray;
+      border-color: gray;
+      margin-bottom: -30px;
+}
+
+.as
+{
+      margin-left: 8px;
+      border: solid;
+      border-width: thin;
+      padding-left: 3px;
+      padding-right: 3px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.playercount
+{
+      position:absolute;
+      width: 30px;
+      height: 14px;
+      cursor: default;
+      margin-left: 8px;
+      border: solid;
+      border-width: thin;
+      text-align: center;
+      cursor: default;
+      margin-top: -1px;
+      padding-bottom: -2px;
+}
+
+.statcount
+{
+      position:absolute;
+      width: 80px;
+      height: 14px;
+      cursor: default;
+      margin-left: 46px;
+      border: solid;
+      border-width: thin;
+      text-align: center;
+      cursor: hand;
+      cursor: pointer;
+      margin-top: -1px;
+      padding-bottom: -2px;
+      color: #993333;
+}
+
+.character
+{
+	display: inline-block;
+      margin-top: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      cursor: hand;
+      cursor: pointer;
+}
+
+.pfp
+{
+	width: 120px;
+}
+
+.pclass
+{
+      display:block;
+      width:20px;
+      margin-top: -12px;
+}
+
+.charname
+{
+      display:block;
+      text-align:center;
+      font-family:miniFont;
+}
+
+.charstats
+{
+      text-align: right;
+      font-size: 9pt;
+      margin-top: -21px;
+      font-family: miniFont;
+}
+
+.charclass
+{
+      text-align: right;
+      font-size: 9pt;
+      margin-top: -2px;
+      font-family: miniFont;
+}
+
+.cbutton
+{
+      margin-left: 8px;
+      border: solid;
+      border-width: thin;
+      padding-left: 3px;
+      padding-right: 3px;
+      cursor: hand;
+      cursor: pointer;
+      color: #006600;
+}
+
+#proceed
+{
+      background: white;
+      width:300px;
+      position:fixed;
+      margin:auto;
+      padding:15px;
+      opacity: .85;
+      border:solid 2px #E06666;
+      border-radius:10px;
+      top: 25%;
+      height: 83px;
+      overflow: hidden;
+      background: #fff;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-family: miniFont;
+      color: gray;
+      display: none;
+}
+
+#proceed > div
+{
+      font-size:20pt;
+      text-align:center;
+}
+
+#proceed > span
+{
+      display:block;
+      margin-top:3px;
+      margin-bottom: 10px;
+}
+
+#proceed > button
+{
+      font-family: miniFont;
+      padding:4px;
+      height:25px;
+      width:40px;
+      background: white;
+      color:gray;
+      border: solid 1px gray;
+      border-radius: 3px;
+      position:relative;
+      top:50%;
+      left:34%;
+      cursor: hand;
+      cursor: pointer;
+}
+
+img.loading
+{
+      width:40px;
+      position:absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      top:105px;
+      display: none;
+}
+
+span.fullcover
+{
+      position:fixed;
+      padding:0;
+      margin:0;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background: red;
+      color:red;
+      z-index:0;
+      opacity: .2;
+      display: none;
+      cursor: default;
+}
+
+div.roundBorder, div.roundBorderA
+{
+      padding:0px;
+      padding-top:2px;
+      margin:auto;
+      margin-top:10px;
+      margin-bottom:-10px;
+}
+
+label.levelbutton
+{
+      font-size:15pt;
+      background:none;
+      margin:2px;
+      font-family:titleFont;
+      cursor: hand;
+      cursor: pointer;
+      color:gray;
+}
+
+label.levelbutton > input
+{
+      display:none;
+}
+
+div.ban
+{
+      position:fixed;
+      background:white;
+      top: 0px;
+      height:20px;
+      width:100%;
+      left:0px;
+      font-family:subFont;
+      text-align:center;
+      min-width:620px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      cursor:default;
+      white-space: nowrap;
+      padding-left:10px;
+}
+
+div.ban > span
+{
+      font-family:miniFont;
+}
+
+div.ban > a
+{
+      text-decoration: none;
+      color: black;
+      font-family:titleFont;
+      padding-left:10px;
+      padding-right:10px;
+}
+
+.timebox
+{
+      background:white;
+      font-family:miniFont;
+      text-align:center;
+      position:absolute;
+      border-radius: 15px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor:default;
+      padding-top:5px;
+      width:250px;
+}
+
+.timebox > div
+{
+      color:black;
+      display:inline-block;
+}
+
+#timerem
+{
+      font-size:50pt;
+      margin:0px;
+      margin-top:0px;
+}
+
+#clockbox
+{
+      font-size:20pt;
+      margin:0px;
+      margin-top:5px;
+}
+
+.scoreboard
+{
+      background:white;
+      font-family:miniFont;
+      position:absolute;
+      text-align:center;
+      border-radius: 15px;
+      cursor:default;
+      padding-top:5px;
+      width:250px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      top:160px;
+      height: calc(100vh - 200px);
+      overflow:scroll;
+}
+
+.leftpanel
+{
+      position:absolute;
+}
+
+.playerinscoreboard
+{
+      position:static;
+      display:block;
+      margin-top:10px;
+      text-align: left;
+      padding-left:12px;
+      padding-right:12px;
+      font-size:9pt;
+}
+
+.playerinscoreboard > div > span
+{
+      font-family: subFont;
+      float:right;
+}
+
+.playerinscoreboard > img
+{
+      width:40px;
+      margin:5px;
+      margin-top:-1px;
+      float:right;
+}
+
+.playerinscoreboard > .classoverlay
+{
+      position:absolute;
+      width:40px;
+      margin:5px;
+      margin-top:-1px;
+      right:12px;
+      float:right;
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+}
+
+.scoreboardtitle
+{
+      position:fixed;
+      background:white;
+      width:250px;
+      height:23px;
+      margin-top:-5px;
+      padding-top:7px;
+      border-radius: 15px 15px 0 0;
+      z-index:1;
+}
+
+.console
+{
+      position: absolute;
+      background: white;
+      left: 268px;
+      right: 10px;
+      border-radius: 0 15px 15px 15px;
+      margin-top: 0px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      min-width: 400px;
+      padding-bottom: 20px;
+      margin-bottom:20px;
+      height: 200px;
+      padding:5px;
+      padding-top:0px;
+      text-align:left;
+      overflow-y: auto;
+      cursor: default;
+      margin-top:20px;
+      border:4px solid white;
+}
+
+.module
+{
+      background-color:#f2f2f2;
+      border-radius: 5px;
+      font-family:miniFont;
+      margin:10px;
+      padding:5px;
+      font-size:22px;
+      height:43px;
+      white-space: nowrap;
+      overflow: hidden;
+}
+
+.moduletime
+{
+      display:block;
+      font-family:subFont;
+      font-size:20px;
+}
+
+#consoletitle
+{
+      font-family:miniFont;
+      margin-left:10px;
+      height:15px;
+      width:80px;
+      background:white;
+      border-radius:15px 15px 0 0;
+      position:absolute;
+      left:258px;
+      top:27px;
+      z-index:1;
+      text-align:center;
+      padding-bottom:4px;
+      padding-top:2px;
+}

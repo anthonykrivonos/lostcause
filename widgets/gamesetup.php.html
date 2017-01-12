@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost/lostcause/gamesetup.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+            <link rel="stylesheet" type="text/css" href="./gamesetup.php_files/theme.css">
+            <script src="./gamesetup.php_files/lostcause.js"></script>
+            <script type="text/javascript">
+                  var test = "images/indexbg/2.jpg";
+                  if (test != '')
+                  {
+                        var bg = "images/indexbg/2.jpg";
+                  }
+            </script>
+      <style type="text/css"></style></head>
+      <body class="index" onload="initialize(OFFLINE);">
+            <img id="indexbg" src="./gamesetup.php_files/3.jpg" class="indexbg" ondragstart="return false;">
+            <div id="offline" class="offline">
+                  <p onclick="location.href=&#39;index.php&#39;">LostCause</p>
+                  <div class="charselect">
+                        <div>Character Selector</div>
+                        <div><img src="./gamesetup.php_files/downarrow.jpg" ondragstart="return false;"></div>
+                  </div>
+                  <div class="chardown">
+                        <form action="" method="POST" autocomplete="off" class="charform">
+                              <input maxlength="14" name="name" type="text" placeholder="Name">
+                              <div class="chooseclass" ondragstart="return false;">
+                                    <label onclick="setClass(&#39;pacifist&#39;);" title="Pacifist"><input style="display:none;" class="cl" type="radio" name="class" value="pacifist" onclick=""><img id="pacifist" src="./gamesetup.php_files/pacifist.png"></label>
+                                    <label onclick="setClass(&#39;gatherer&#39;);" title="Gatherer"><input style="display:none;" class="cl" type="radio" name="class" value="gatherer"><img id="gatherer" src="./gamesetup.php_files/gatherer.png"></label>
+                                    <label onclick="setClass(&#39;medic&#39;);" title="Medic"><input style="display:none;" class="cl" type="radio" name="class" value="medic"><img id="medic" src="./gamesetup.php_files/medic.png"></label>
+                                    <label onclick="setClass(&#39;craftsman&#39;);" title="Craftsman"><input style="display:none;" class="cl" type="radio" name="class" value="craftsman"><img id="craftsman" src="./gamesetup.php_files/craftsman.png"></label>
+                                    <label onclick="setClass(&#39;hacker&#39;);" title="Hacker"><input style="display:none;" class="cl" type="radio" name="class" value="hacker"><img id="hacker" src="./gamesetup.php_files/hacker.png"></label>
+                                    <label onclick="setClass(&#39;hunter&#39;);" title="Hunter"><input style="display:none;" class="cl" type="radio" name="class" value="hunter"><img id="hunter" src="./gamesetup.php_files/hunter.png"></label>
+                                    <label onclick="setClass(&#39;warrior&#39;);" title="Warrior"><input style="display:none;" class="cl" type="radio" name="class" value="warrior"><img id="warrior" src="./gamesetup.php_files/warrior.png"></label>
+                              </div>
+                        </form>
+                        <img src="./gamesetup.php_files/testimage.png" style="width:200px; height:200px; margin-top: 18px; border:solid;">
+                        <div class="slider" ondragstart="return false;">
+                              <img src="./gamesetup.php_files/larrow.png" class="L" onclick="drag(L, &#39;One&#39;, &#39;atk&#39;);">
+                              <img src="./gamesetup.php_files/rarrow.png" class="R" onclick="drag(R, &#39;One&#39;, &#39;atk&#39;);">
+                              <img class="line" style="margin-top:42px;" src="./gamesetup.php_files/line.png">
+                              <img class="vlinel" src="./gamesetup.php_files/vertline.png">
+                              <img class="vliner" src="./gamesetup.php_files/vertline.png">
+                              <img id="sliderOne" src="./gamesetup.php_files/nav.png" class="nav" style="margin-left:107.5px;">
+                        </div>
+                        <div class="counttag">Attack: </div><div id="atkcount" class="countid">5</div>
+                        <div class="slider" style="position:static; margin-top: -20px;" ondragstart="return false;">
+                              <img src="./gamesetup.php_files/larrow.png" class="L" onclick="drag(L, &#39;Two&#39;, &#39;def&#39;);">
+                              <img src="./gamesetup.php_files/rarrow.png" class="R" onclick="drag(R, &#39;Two&#39;, &#39;def&#39;);">
+                              <img class="line" style="margin-top:42px;" src="./gamesetup.php_files/line.png">
+                              <img class="vlinel" src="./gamesetup.php_files/vertline.png">
+                              <img class="vliner" src="./gamesetup.php_files/vertline.png">
+                              <img id="sliderTwo" src="./gamesetup.php_files/nav.png" class="nav" style="margin-left:107.5px;">
+                        </div>
+                        <div class="counttag">Defense: </div><div id="defcount" class="countid">5</div>
+                        <div class="slider" style="position:static; margin-top: -20px;" ondragstart="return false;">
+                              <img src="./gamesetup.php_files/larrow.png" class="L" onclick="drag(L, &#39;Three&#39;, &#39;speed&#39;);">
+                              <img src="./gamesetup.php_files/rarrow.png" class="R" onclick="drag(R, &#39;Three&#39;, &#39;speed&#39;);">
+                              <img class="line" style="margin-top:42px;" src="./gamesetup.php_files/line.png">
+                              <img class="vlinel" src="./gamesetup.php_files/vertline.png">
+                              <img class="vliner" src="./gamesetup.php_files/vertline.png">
+                              <img id="sliderThree" src="./gamesetup.php_files/nav.png" class="nav" style="margin-left:107.5px;">
+                        </div>
+                        <div class="counttag">Speed: </div><div id="speedcount" class="countid">5</div>
+                        <div class="slider" style="position:static; margin-top: -20px;" ondragstart="return false;">
+                              <img src="./gamesetup.php_files/larrow.png" class="L" onclick="drag(L, &#39;Four&#39;, &#39;res&#39;);">
+                              <img src="./gamesetup.php_files/rarrow.png" class="R" onclick="drag(R, &#39;Four&#39;, &#39;res&#39;);">
+                              <img class="line" style="margin-top:42px;" src="./gamesetup.php_files/line.png">
+                              <img class="vlinel" src="./gamesetup.php_files/vertline.png">
+                              <img class="vliner" src="./gamesetup.php_files/vertline.png">
+                              <img id="sliderFour" src="./gamesetup.php_files/nav.png" class="nav" style="margin-left:107.5px;">
+                        </div>
+                        <div class="counttag">Resourcefulness: </div><div id="rescount" class="countid">5</div>
+                        <div class="slider" style="position:static; margin-top: -20px;" ondragstart="return false;">
+                              <img src="./gamesetup.php_files/larrow.png" class="L" onclick="drag(L, &#39;Five&#39;, &#39;ins&#39;);">
+                              <img src="./gamesetup.php_files/rarrow.png" class="R" onclick="drag(R, &#39;Five&#39;, &#39;ins&#39;);">
+                              <img class="line" style="margin-top:42px;" src="./gamesetup.php_files/line.png">
+                              <img class="vlinel" src="./gamesetup.php_files/vertline.png">
+                              <img class="vliner" src="./gamesetup.php_files/vertline.png">
+                              <img id="sliderFive" src="./gamesetup.php_files/nav.png" class="nav" style="margin-left:107.5px;">
+                        </div>
+                        <div class="counttag">Instinct: </div><div id="inscount" class="countid">5</div>
+                        <button class="updatebutton">Submit</button>
+                  </div>
+            </div>
+      
+
+</body></html>
